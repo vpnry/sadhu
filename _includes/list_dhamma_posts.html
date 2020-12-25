@@ -1,0 +1,13 @@
+<!-- List all posts in a category, based on https://gist.github.com/erjjones/1998382#file-jekylllistallposts-html -->
+
+
+<div class="list-all-posts">
+  <h3>Posts in Dhamma category</h3>
+  <ul>
+    {% for post in site.categories.dhamma %}
+    <li><a class="no-decoration" href="{{ post.url }}">{{ post.title }}</a>
+      <span><small> <i>{{ post.date | date: "%B %e, %Y" }}</i> {{ post.category }} </small></span></li>
+    {% endfor %}
+  </ul>
+
+</div>

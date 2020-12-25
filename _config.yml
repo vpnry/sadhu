@@ -1,0 +1,74 @@
+# Build settings
+# gems:
+plugins:
+  - jemoji
+  - jekyll-paginate
+  - jekyll-sitemap
+ 
+ # Highlighter
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    block:
+      line_numbers: true
+
+# Site settings
+title: "Sādhu Notes"
+description: > # this means to ignore newlines until "email:"
+  ˌmɪsəˈleɪnɪəs sādhu
+
+email: v?@gmail dot you knew
+#blog logo
+logo: "/assets/images/pnry.webp"
+float_logo: false # true, false (default)
+
+# blog cover
+cover: "/assets/images/2020-11-28-160804.webp"
+
+name: 'U PNRY'
+author: 'U PNRY'
+author_image: "/assets/images/pnry.webp"
+
+paginate:	5
+
+url: "https://vpnry.github.io/sadhu" # the base hostname & protocol for your site
+baseurl: ""
+#used to display twitter cards
+twitter_handle: ''
+
+#fill in disqus shortname to use disqus
+#disqus: disqus-shortname
+
+#google_analytics: UA-XXXXX-X
+
+# social icons and sharing options
+social:
+  - icon:	twitter
+    url:	https://twitter.com
+    desc: Follow me on twitter
+    share_url: http://twitter.com/share
+    share_title: ?text=
+    share_link: "&amp;url="
+
+#  - icon:	facebook
+#    url:	https://facebook.com/???
+#    desc: Connect with me facebook
+#    share_url: https://www.facebook.com/sharer.php
+#    share_title: ?t=
+#    share_link: "&amp;u="
+
+  - icon:	github
+    url:	https://github.com/vpnry
+    desc:	IT & Dhamma
+    share_url:
+    share_title:
+    share_link:
+
+#  - icon:	google-plus
+#    url:	https://google.com/???
+#    desc:	Add me on google+
+#    share_url:
+#    share_title:
+#    share_link:

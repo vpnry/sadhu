@@ -1,0 +1,66 @@
+---
+layout: default
+---
+<!--<div class="teaserimage">-->
+<!--    <div class="teaserimage-image" {% if site.cover %}style="background-image: url({{ site.cover | prepend: site.baseurl }})"{% endif %}>-->
+<!--        Teaser Image-->
+<!--    </div>-->
+<!--</div>-->
+
+<header class="blog-header">
+    {% if site.logo %}
+      <a class="blog-logo" href="{{site.url}}{{site.baseurl}}" style="background-image: url('{{ site.logo | prepend: site.baseurl }}')">{{ site.title }}</a>
+    {% endif %}
+    <h1 class="blog-title">{{ site.title }}</h1>
+    <h2 class="blog-description">{{ site.description }}</h2>
+    <div class="custom-links">
+       <a href={{ "/all-posts.html" | prepend: site.baseurl }}><span class="icon-list2"></span> Posts</a>
+       | 
+       <a href={{ "/search.html" | prepend: site.baseurl }}><span class="icon-search"></span> Posts</a>
+       |
+       <a href="https://vpnry.github.io/fts" target="_blank"><span class="icon-compass"></span> DhammaFTS</a>
+       | 
+       <a href={{ "/about/" | prepend: site.baseurl }}><span class="icon-info"></span> About</a>
+
+      </div>
+</header>
+
+
+<main class="content" role="main">
+    <div class="cf frame">
+      {% for post in paginator.posts %}
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting" role="article">
+          <div class="article-item">
+            <header class="post-header">
+              <h2 class="post-title" itemprop="name"><a href="{{ post.url | prepend: site.baseurl }}" itemprop="url">{{ post.title }}</a></h2>
+            </header>
+            <section class="post-excerpt" itemprop="description">
+              <p>{{ post.excerpt | strip_html | truncatewords: 50 }}</p>
+            </section>
+            <div class="post-meta">
+              <time datetime="{{ post.date | date_to_long_string }}">{{ post.date | date_to_long_string }}</time>
+            </div>
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+
+
+
+    <nav class="pagination" role="navigation">
+      {% if paginator.next_page %}
+        <a class="newer-posts" href={{ "/page" | prepend: site.baseurl | append: paginator.next_page }}>&larr; Older posts</a>
+      {% endif %}
+      <span class="page-number">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
+      {% if paginator.previous_page %}
+        {% if paginator.page == 2 %}
+          <a class="older-posts" href={{ "/" | prepend: site.baseurl }}>Newer posts &rarr;</a>
+        {% else %}
+          <a class="older-posts" href={{ "/page" | prepend: site.baseurl | append: paginator.previous_page }}>Newer posts &rarr;</a>
+        {% endif %}
+      {% endif %}
+    </nav>
+         
+    
+
+</main>

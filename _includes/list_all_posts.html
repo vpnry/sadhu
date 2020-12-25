@@ -1,0 +1,16 @@
+<!-- List all posts, based on https://gist.github.com/erjjones/1998382#file-jekylllistallposts-html -->
+
+<div class="list-all-posts">
+  <ul>
+    {% for category in site.categories %}
+    {% assign cate = category[0] %}
+    <p>Posts in <b>{{ cate | upcase }}</b> category:</p>
+    <ul>
+      {% for post in site.categories[cate] %}
+      <li><a class="no-decoration" href="{{ post.url }}">{{ post.title }}</a><span><small> <i>{{ post.date | date: "%B %e, %Y" }}</i> {{ post.category }} </small></span>
+      </li>
+      {% endfor %}
+    </ul>
+    {% endfor %}
+  </ul>
+</div>

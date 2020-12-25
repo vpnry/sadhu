@@ -1,0 +1,41 @@
+/* Credit: https://blog.webjeda.com/jekyll-toc/ */
+
+/* Adding 'Table of Contents' headline to the TOC */
+#pure-toc::before {
+  content: "Table of Contents";
+  font-weight: bold;
+}
+
+/* Using numbers instead of bullets for listing */
+#pure-toc ul {
+  list-style: decimal;
+}
+
+#pure-toc a {
+  text-decoration: none;
+}
+
+#pure-toc {
+  border: 1px solid #aaa;
+  /* top right bottom left */
+  padding: 1.5em 1.5em 0em 1.5em;
+  margin-bottom: 3em;
+  list-style: decimal;
+  display: inline-block;
+  background-color: #f4f4f4;
+}
+
+/* For list_all_posts.html */
+.list-all-posts li {
+  margin-bottom: 1.5em;
+}
+
+.no-decoration {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#lunr-search-results a {
+  text-decoration: none;
+  font-weight: bold;
+}

@@ -1,0 +1,12 @@
+<!-- List all posts, adapted from https://gist.github.com/erjjones/1998382#file-jekylllistallposts-html -->
+
+
+<div class="list-all-posts">
+  <ul>
+    {% for post in site.posts %}
+    <li><a class="no-decoration" href="{{ post.url }}">{{ post.title }}</a>
+      <span><small><i>{{ post.date | date: "%B %e, %Y" }}</i> {{ post.category }} </small></span></li>
+    {% endfor %}
+  </ul>
+
+</div>

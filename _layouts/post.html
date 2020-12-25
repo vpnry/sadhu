@@ -1,0 +1,72 @@
+---
+---
+<!DOCTYPE html>
+<html>
+  {% include head.html %}
+  <body itemscope itemtype="http://schema.org/Article">
+    {% include header.html %}
+    <main class="content" role="main">
+      <article class="post">
+        {% if page.image %}
+        <div class="article-image">
+          <div class="post-image-image" style="background-image: url({% if page.image %}{{ page.image | prepend: site.baseurl }}{% endif %})">
+            Article Image
+          </div>
+          <div class="post-image-image2" style="background-image: url({% if page.image2 %}{{ page.image2 | prepend: site.baseurl }}{% endif %})">
+            Article Image
+          </div>
+          <div class="post-meta">
+            <h1 class="post-title">{{ page.title }}</h1>
+            <div class="cf post-meta-text">
+              <div class="author-image" style="background-image: url({{ site.author_image | prepend: site.baseurl }})">Blog Logo</div>
+              <h4 class="author-name" itemprop="author" itemscope itemtype="http://schema.org/Person">{{ site.author }}</h4>
+              on
+              <time datetime="{{ page.date | date: "%F %R" }}">{{ page.date | date_to_string }}</time>
+            </div>
+            <div style="text-align:center">
+              <a href="#topofpage" class="topofpage"><span class="icon-circle-down"></span></a>
+            </div>
+          </div>
+        </div>
+        {% else %}
+        <div class="noarticleimage">
+          <div class="post-meta">
+            <h1 class="post-title">{{ page.title }}</h1>
+            <div class="cf post-meta-text">
+              <div class="author-image" style="background-image: url({{ site.author_image | prepend: site.baseurl }})">Blog Logo</div>
+              <h4 class="author-name" itemprop="author" itemscope itemtype="http://schema.org/Person">{{ page.author }}</h4>
+              on
+              <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date_to_string }}</time>
+            </div>
+          </div>
+        </div>
+
+        <br>
+        {% endif %}
+        <!-- @vpnry added default: enabled auto TOC for all post. add showtoc: "no" to post to disable auto TOC -->
+        {% if page.showtoc == "no" %}
+        <section class="post-content">
+          <a name="topofpage"></a>
+          {{content}}
+        </section>
+        {% else %}
+        <section class="post-content">
+          <!--disabled readingTime-->
+          <a name="topofpage"></a>
+          <div id="pure-toc">{% include toc.html html=content %}</div>
+          {{content}}
+        </section>
+
+        {% endif %}
+
+        <footer class="post-footer">
+        </footer>
+      </article>
+    </main>
+
+
+    {% include footer_navigation.html %}
+
+    {% include javascripts.html %}
+  </body>
+</html>
