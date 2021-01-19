@@ -10,7 +10,7 @@ permalink: /about/
 ## Site Address
 
 + Main address (stable): [https://vpnry.github.io/sadhu](https://vpnry.github.io/sadhu)
-+ Shortcut address: [https://sadhu.us.to](https://sadhu.us.to)
++ Shortcut address: [https://sadhu.eu.org](https://sadhu.eu.org)
 
 ## Topics
 
@@ -43,9 +43,9 @@ We modified it to our needs, mainly focused on simplicity and speed.
 
 ### Useful Online Utilities
 
-+ [Compress image](https://compressor.io)
-+ [Favicon Tool](https://realfavicongenerator.net)
-+ [IcoMoon - custom icon packs](https://icomoon.io/app)
++ [Compress image]
++ [Favicon Tool]
++ [IcoMoon - custom icon packs]
 + [Free DNS](https://freedns.afraid.org)
 + And others.
 
