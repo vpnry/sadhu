@@ -10,10 +10,12 @@
   <link rel="icon" type="image/png" sizes="32x32" href="{{ "/lib/icons/favicon-32x32.png"  | prepend: site.baseurl  }}" />
   <link rel="icon" type="image/png" sizes="16x16" href="{{ "/lib/icons/favicon-16x16.png"  | prepend: site.baseurl  }}" />
   <link rel="manifest" href="{{ "/lib/icons/site.webmanifest"  | prepend: site.baseurl  }}" />
-  <link rel="mask-icon" href="{{ "/lib/icons/safari-pinned-tab.svg"  | prepend: site.baseurl  }}" />
+  <link rel="mask-icon" color="#5bbad5" href="{{ "/lib/icons/safari-pinned-tab.svg"  | prepend: site.baseurl  }}" />
+  <link rel="shortcut icon" href="{{ "/lib/icons/favicon.ico"  | prepend: site.baseurl  }}" />
   <meta name="msapplication-TileColor" content="#da532c">
+  <link rel="msapplication-config" content="{{ "/lib/icons/browserconfig.xml"  | prepend: site.baseurl  }}" />
   <meta name="theme-color" content="#ffffff">
-
+  
   
   <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 200 }}{% else %}{{ site.description }}{% endif %}" />
